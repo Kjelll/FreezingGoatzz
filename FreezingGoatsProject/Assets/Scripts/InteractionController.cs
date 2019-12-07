@@ -69,7 +69,6 @@ public class InteractionController : MonoBehaviour
         r2b2.AddForce(force1);
         r2b2.angularVelocity = -force1.x;
         yield return new WaitForSeconds(0.5f);
-
-        r2b2.AddForce(forceAfterSecond);
+        if(r2b2!=null)        r2b2.AddForce(forceAfterSecond);
     }
 }

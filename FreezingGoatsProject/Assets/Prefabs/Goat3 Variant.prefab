@@ -10,12 +10,22 @@ PrefabInstance:
     - target: {fileID: 3012039700334310696, guid: 81b66028537150a439f76310e1cb0a46,
         type: 3}
       propertyPath: m_Name
-      value: Goat3
+      value: Goat3 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3012039700334310696, guid: 81b66028537150a439f76310e1cb0a46,
         type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310675, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_WhatIsYeetable.m_Bits
+      value: 11831
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310674, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: controllerSuffix
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3012039700334310679, guid: 81b66028537150a439f76310e1cb0a46,
         type: 3}
@@ -77,18 +87,15 @@ PrefabInstance:
       propertyPath: m_WhatIsGround.m_Bits
       value: 12087
       objectReference: {fileID: 0}
-    - target: {fileID: 3012039700334310674, guid: 81b66028537150a439f76310e1cb0a46,
-        type: 3}
-      propertyPath: controllerSuffix
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3012039700334310675, guid: 81b66028537150a439f76310e1cb0a46,
-        type: 3}
-      propertyPath: m_WhatIsYeetable.m_Bits
-      value: 11831
-      objectReference: {fileID: 0}
-    - target: {fileID: 3012039700931070808, guid: 81b66028537150a439f76310e1cb0a46,
-        type: 3}
+    - target: {fileID: 663119201, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: iceBlock
+      value: 
+      objectReference: {fileID: 8683084465052562460}
+    - target: {fileID: 663119201, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: iceObjects
+      value: 
+      objectReference: {fileID: 8683084463597868869}
+    - target: {fileID: 1362142044, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
@@ -97,11 +104,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 1873969608, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+    - target: {fileID: 3012039700931070808, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1103454039, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873969608, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
@@ -117,13 +129,21 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.41037738
       objectReference: {fileID: 0}
-    - target: {fileID: 1362142044, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 946716677, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+--- !u!1 &8683084463597868869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1362142044, guid: 81b66028537150a439f76310e1cb0a46,
+    type: 3}
+  m_PrefabInstance: {fileID: 8683084464920097817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8683084465052562460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 946716677, guid: 81b66028537150a439f76310e1cb0a46,
+    type: 3}
+  m_PrefabInstance: {fileID: 8683084464920097817}
+  m_PrefabAsset: {fileID: 0}

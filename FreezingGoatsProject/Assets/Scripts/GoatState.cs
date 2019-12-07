@@ -7,7 +7,6 @@ public class GoatState : MonoBehaviour
     public int hitpoints = 2;
     public GameObject iceObjects;
     public GameObject iceBlock;
-    public GameObject totalFreezeBlock;
 
     public void headButtEvent(float yeetPowa, Rigidbody2D r2b2)
     {
@@ -42,7 +41,6 @@ public class GoatState : MonoBehaviour
     { 
         yield return new WaitForSeconds(seconds);
         Destroy(r2b2);
-        totalFreezeBlock.SetActive(true);
-        iceBlock.SetActive(false);
+        iceBlock.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 1f, 0.8f);
     }
 }

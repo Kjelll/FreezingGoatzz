@@ -10,12 +10,22 @@ PrefabInstance:
     - target: {fileID: 3012039700334310696, guid: 81b66028537150a439f76310e1cb0a46,
         type: 3}
       propertyPath: m_Name
-      value: Goat2
+      value: Goat2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3012039700334310696, guid: 81b66028537150a439f76310e1cb0a46,
         type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310675, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_WhatIsYeetable.m_Bits
+      value: 13879
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310674, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: controllerSuffix
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3012039700334310679, guid: 81b66028537150a439f76310e1cb0a46,
         type: 3}
@@ -72,18 +82,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3012039700334310674, guid: 81b66028537150a439f76310e1cb0a46,
+    - target: {fileID: 3012039700334310697, guid: 81b66028537150a439f76310e1cb0a46,
         type: 3}
-      propertyPath: controllerSuffix
-      value: 2
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 14135
       objectReference: {fileID: 0}
-    - target: {fileID: 3012039700334310675, guid: 81b66028537150a439f76310e1cb0a46,
-        type: 3}
-      propertyPath: m_WhatIsYeetable.m_Bits
-      value: 5687
-      objectReference: {fileID: 0}
-    - target: {fileID: 3012039700931070808, guid: 81b66028537150a439f76310e1cb0a46,
-        type: 3}
+    - target: {fileID: 663119201, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: iceObjects
+      value: 
+      objectReference: {fileID: 2744179128205723224}
+    - target: {fileID: 663119201, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: iceBlock
+      value: 
+      objectReference: {fileID: 2744179128627569921}
+    - target: {fileID: 1362142044, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
@@ -92,11 +104,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 1873969608, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+    - target: {fileID: 3012039700931070808, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1103454039, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873969608, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
@@ -112,13 +129,21 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.30874732
       objectReference: {fileID: 0}
-    - target: {fileID: 1362142044, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 946716677, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+--- !u!1 &2744179128205723224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1362142044, guid: 81b66028537150a439f76310e1cb0a46,
+    type: 3}
+  m_PrefabInstance: {fileID: 2744179129024701700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2744179128627569921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 946716677, guid: 81b66028537150a439f76310e1cb0a46,
+    type: 3}
+  m_PrefabInstance: {fileID: 2744179129024701700}
+  m_PrefabAsset: {fileID: 0}
