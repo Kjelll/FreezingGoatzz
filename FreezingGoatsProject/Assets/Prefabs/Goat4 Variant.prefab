@@ -77,6 +77,11 @@ PrefabInstance:
       propertyPath: m_WhatIsGround.m_Bits
       value: 7991
       objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310674, guid: 5c1d503a066f4284184b96948cf8f69a,
+        type: 3}
+      propertyPath: controllerSuffix
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3012039700334310675, guid: 5c1d503a066f4284184b96948cf8f69a,
         type: 3}
       propertyPath: m_WhatIsYeetable.m_Bits
@@ -107,10 +112,6 @@ PrefabInstance:
     - target: {fileID: 946716677, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
       propertyPath: m_Layer
       value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1103454041, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1103454041, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
       propertyPath: m_Color.g

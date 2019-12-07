@@ -38,7 +38,7 @@ public class InputController : MonoBehaviour
         if (Input.GetButtonUp("Jump" + controllerSuffix))
         {
             jump = true;
-            Debug.Log("Jump num:" + controllerSuffix + " duration " + yeetDuration);
+            //Debug.Log("Jump num:" + controllerSuffix + " duration " + yeetDuration);
         }
 
         if (Input.GetAxis("Scream" + controllerSuffix)>=0.7f)
@@ -49,13 +49,13 @@ public class InputController : MonoBehaviour
         if (Input.GetButton("Interact" + controllerSuffix))
         {
             yeetDuration += Time.deltaTime;
-            Debug.Log("yeet charging"); 
+ 
         }
 
         if (Input.GetButtonUp("Interact" + controllerSuffix))
         {
             yeet = true;
-            Debug.Log( "yeet num:" + controllerSuffix +" duration " + yeetDuration); 
+           // Debug.Log( "yeet num:" + controllerSuffix +" duration " + yeetDuration); 
         }
 
     }
