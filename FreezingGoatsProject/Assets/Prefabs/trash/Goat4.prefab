@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8326659871264675320
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3012039700334310696, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_Name
+      value: Goat4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310696, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310679, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310679, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310679, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310679, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310679, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310679, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310679, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310679, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310679, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310679, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310679, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310697, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 7991
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310674, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: controllerSuffix
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310675, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_WhatIsYeetable.m_Bits
+      value: 7735
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700931070808, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039701076034459, guid: 81b66028537150a439f76310e1cb0a46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873969608, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103454039, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103454041, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103454041, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: m_Color.g
+      value: 0.41037738
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103454041, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: m_Color.b
+      value: 0.41037738
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362142044, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 946716677, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
