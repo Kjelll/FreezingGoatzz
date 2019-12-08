@@ -64,6 +64,8 @@ MonoBehaviour:
     m_Bits: 15159
   m_GroundCheck: {fileID: 1001369223301009872}
   m_CeilingCheck: {fileID: 1001369223580195089}
+  jumpSound: {fileID: 0}
+  animator: {fileID: 5882605083553040971}
   m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
@@ -104,6 +106,7 @@ MonoBehaviour:
   controllerSuffix: 1
   speed: 40
   honk: 0
+  animator: {fileID: 5882605083553040971}
   goatController: {fileID: 1001369222969010017}
   interactionController: {fileID: 1001369222969010011}
 --- !u!114 &1001369222969010011
@@ -118,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9402d1983ed601e4e87074410b4ae690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  honkSound: {fileID: 1001369222969010008}
+  sound: {fileID: 0}
   m_WhatIsYeetable:
     serializedVersion: 2
     m_Bits: 14903
@@ -126,6 +129,7 @@ MonoBehaviour:
   m_AttackPosition: {fileID: 2605752565185237889}
   m_scalingYeetPower: {x: 420, y: 1042}
   m_minimumYeetPower: {x: 420, y: 1042}
+  ParticleSystem: {fileID: 0}
   attackCooldown: 1
 --- !u!82 &1001369222969010008
 AudioSource:
@@ -450,7 +454,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.52, y: 2.07, z: 0.52, w: 0.48999998}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 2.56, y: 2.56}
