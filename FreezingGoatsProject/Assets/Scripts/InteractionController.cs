@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class InteractionController : MonoBehaviour
 {
-    public AudioSource honkSound;
+    public AudioSource sound;
     [SerializeField] private LayerMask m_WhatIsYeetable;
     [SerializeField] private float k_yeetableRadius = .5f;
     [SerializeField] private Transform m_AttackPosition;
     [SerializeField] private Vector2  m_scalingYeetPower;
     [SerializeField] private Vector2 m_minimumYeetPower;
+    bool isCuteGoat = false;
+    public GameObject ParticleSystem;
 
     public float attackCooldown = 1.0f;
     bool cooldownActive = false;
@@ -18,17 +20,34 @@ public class InteractionController : MonoBehaviour
     private void Awake()
     {
         ownGoatState = GetComponent<GoatState>();
+       
     }
     void Start()
     {
-        honkSound = GetComponent<AudioSource>();
+        sound = GetComponent<AudioSource>();
+        if (ownGoatState.playerNumber == 1 || ownGoatState.playerNumber == 3)
+        {
+            isCuteGoat = true;
+        }
+
+
+
     }
 
     public void Honk(bool isHonking)
     {
         if (isHonking)
         {
-            honkSound.Play();
+            if (isCuteGoat)
+            {
+                sound.clip = ClipHolder.instance.GetCuteVoice();
+            }
+            else
+            {
+                sound.clip = ClipHolder.instance.GetNormalVoice();
+            }
+
+            sound.Play();
         }
 
     }
@@ -37,6 +56,8 @@ public class InteractionController : MonoBehaviour
     {
         if (cooldownActive) return;
         cooldownActive = true;
+        sound.clip = ClipHolder.instance.GetYeetSound();
+        sound.Play();
         StartCoroutine(waitForCooldown());
         List<Rigidbody2D> goatRBs = new List<Rigidbody2D>();
             Collider2D[] colliders = Physics2D.OverlapCircleAll(m_AttackPosition.position, k_yeetableRadius, m_WhatIsYeetable);
@@ -52,6 +73,7 @@ public class InteractionController : MonoBehaviour
                         goatRBs.Add(targetRB);
 
                         targetRB.freezeRotation = false;
+                    targetRB.GetComponent<InteractionController>().ParticleSystem.SetActive(true);
                         float faceDir = gameObject.transform.localScale.x;
                     GoatState targetGS = colliders[i].gameObject.GetComponent<GoatState>();
                     if (targetGS != null) targetGS.headButtEvent(yeets, targetRB, ownGoatState);

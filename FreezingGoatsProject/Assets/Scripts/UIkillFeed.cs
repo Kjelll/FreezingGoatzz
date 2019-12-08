@@ -10,6 +10,14 @@ public class UIkillFeed : MonoBehaviour
     public Text Goat2kills;
     public Text Goat3kills;
     public Text Goat4kills;
+
+
+
+    public int killCount1 = 0;
+    public int killCount2 = 0;
+    public int killCount3 = 0;
+    public int killCount4 = 0;
+
     public int totalKills = 0;
 
     private void Awake()
@@ -30,24 +38,47 @@ public class UIkillFeed : MonoBehaviour
         }
     }
 
+    public int getMaxKills()
+    {
+        return Mathf.Max(killCount1, killCount2, killCount3, killCount4);
+    }
+    public int getWinner()
+    {
+        int max = Mathf.Max(killCount1, killCount2, killCount3, killCount4);
+        if(max== killCount1)
+        {
+            return 1;
 
+        }
+        if (max == killCount2)
+        {
+            return 2;
+        } 
+        if (max == killCount3)
+        {
+            return 3;
+
+        }
+        return 4;
+
+    }
 
     public void goat1kill() {  
-        Goat1kills.text = "" + ( int.Parse(Goat1kills.text) + 1);
+        Goat1kills.text = "" + ++killCount1;
     }
     public void goat2kill()
     {
-        Goat2kills.text = "" + (int.Parse(Goat2kills.text) + 1);
+        Goat2kills.text = "" + ++killCount2;
 
     }
     public void goat3kill()
     {
-        Goat3kills.text = "" + (int.Parse(Goat3kills.text) + 1);
+        Goat3kills.text = "" + ++killCount3;
 
     }
     public void goat4kill()
     {
-        Goat4kills.text = "" + (int.Parse(Goat4kills.text) + 1);
+        Goat4kills.text = "" + ++killCount4;
 
     }
 }

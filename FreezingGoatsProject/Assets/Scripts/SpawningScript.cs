@@ -38,5 +38,20 @@ public class SpawningScript : MonoBehaviour
 
     }
 
+    public GameObject spawnAtPos(int playerNum,Vector3 posi)
+    {
+        GameObject toInstantiate = PlayerPrefab1;
+        switch (playerNum)
+        {
+            case 2: toInstantiate = PlayerPrefab2; break;
+            case 3: toInstantiate = PlayerPrefab3; break;
+            case 4: toInstantiate = PlayerPrefab4; break;
+
+        }
+        GameObject newSpawn = Instantiate(toInstantiate,  posi, Quaternion.identity);
+
+        return newSpawn;
+    }
+
 
 }
