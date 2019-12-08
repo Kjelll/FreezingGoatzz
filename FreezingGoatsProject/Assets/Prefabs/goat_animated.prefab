@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4341362441950235156}
   - component: {fileID: 6067899940778911593}
   - component: {fileID: 2605752564244363049}
+  - component: {fileID: 863247707729258366}
   m_Layer: 10
   m_Name: goat_animated
   m_TagString: Untagged
@@ -64,6 +65,8 @@ MonoBehaviour:
     m_Bits: 15159
   m_GroundCheck: {fileID: 1001369223301009872}
   m_CeilingCheck: {fileID: 1001369223580195089}
+  jumpSound: {fileID: 0}
+  animator: {fileID: 5882605083553040971}
   m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
@@ -104,6 +107,7 @@ MonoBehaviour:
   controllerSuffix: 1
   speed: 40
   honk: 0
+  animator: {fileID: 5882605083553040971}
   goatController: {fileID: 1001369222969010017}
   interactionController: {fileID: 1001369222969010011}
 --- !u!114 &1001369222969010011
@@ -118,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9402d1983ed601e4e87074410b4ae690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  honkSound: {fileID: 1001369222969010008}
+  sound: {fileID: 0}
   m_WhatIsYeetable:
     serializedVersion: 2
     m_Bits: 14903
@@ -126,6 +130,7 @@ MonoBehaviour:
   m_AttackPosition: {fileID: 2605752565185237889}
   m_scalingYeetPower: {x: 420, y: 1042}
   m_minimumYeetPower: {x: 420, y: 1042}
+  ParticleSystem: {fileID: 0}
   attackCooldown: 1
 --- !u!82 &1001369222969010008
 AudioSource:
@@ -295,6 +300,19 @@ MonoBehaviour:
   iceObjects: {fileID: 2605752564489122068}
   iceBlock: {fileID: 2605752563830788685}
   playerNumber: 0
+--- !u!114 &863247707729258366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001369222969010016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d7e765cf8998e499e2c844297ca1ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5882605083553040971}
 --- !u!1 &1001369223301009875
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +468,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.52, y: 2.07, z: 0.52, w: 0.48999998}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 2.56, y: 2.56}
