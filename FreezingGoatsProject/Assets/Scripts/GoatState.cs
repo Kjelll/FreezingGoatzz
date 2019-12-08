@@ -8,6 +8,7 @@ public class GoatState : MonoBehaviour
     public SpriteRenderer sprite;
     public GameObject iceObjects;
     public GameObject iceBlock;
+    public GameObject deepFreezeiceBlock;
     public int playerNumber;
 
 

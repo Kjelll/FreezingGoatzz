@@ -17,6 +17,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 663119201, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+      propertyPath: playerNumber
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3012039700334310679, guid: 5c1d503a066f4284184b96948cf8f69a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -72,6 +76,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7817065665502079487, guid: 5c1d503a066f4284184b96948cf8f69a,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873969608, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 3012039700334310697, guid: 5c1d503a066f4284184b96948cf8f69a,
         type: 3}
       propertyPath: m_WhatIsGround.m_Bits
@@ -87,10 +100,13 @@ PrefabInstance:
       propertyPath: m_WhatIsYeetable.m_Bits
       value: 7735
       objectReference: {fileID: 0}
-    - target: {fileID: 7817065665502079487, guid: 5c1d503a066f4284184b96948cf8f69a,
-        type: 3}
-      propertyPath: m_Material
-      value: 
+    - target: {fileID: 1103454041, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103454041, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8249526
       objectReference: {fileID: 0}
     - target: {fileID: 1362142044, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
       propertyPath: m_Layer
@@ -104,10 +120,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 1873969608, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
     - target: {fileID: 3012039700931070808, guid: 5c1d503a066f4284184b96948cf8f69a,
         type: 3}
       propertyPath: m_Layer
@@ -118,13 +130,20 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 1103454041, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
-      propertyPath: m_Color.g
-      value: 0
+    - target: {fileID: 4346646542257210770, guid: 5c1d503a066f4284184b96948cf8f69a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.054901965
       objectReference: {fileID: 0}
-    - target: {fileID: 1103454041, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+    - target: {fileID: 4346646542257210770, guid: 5c1d503a066f4284184b96948cf8f69a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346646542257210770, guid: 5c1d503a066f4284184b96948cf8f69a,
+        type: 3}
       propertyPath: m_Color.b
-      value: 0.8249526
+      value: 0.09019608
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}

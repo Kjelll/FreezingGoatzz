@@ -17,6 +17,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 663119201, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+      propertyPath: playerNumber
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3012039700334310679, guid: 5c1d503a066f4284184b96948cf8f69a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -72,15 +76,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3012039700334310697, guid: 5c1d503a066f4284184b96948cf8f69a,
-        type: 3}
-      propertyPath: m_WhatIsGround.m_Bits
-      value: 12087
-      objectReference: {fileID: 0}
     - target: {fileID: 3012039700334310676, guid: 5c1d503a066f4284184b96948cf8f69a,
         type: 3}
       propertyPath: m_Material
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817065665502079487, guid: 5c1d503a066f4284184b96948cf8f69a,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735821019189729372, guid: 5c1d503a066f4284184b96948cf8f69a,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873969609, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873969608, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873969608, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873969611, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873969610, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012039700334310697, guid: 5c1d503a066f4284184b96948cf8f69a,
+        type: 3}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 12087
       objectReference: {fileID: 0}
     - target: {fileID: 3012039700334310674, guid: 5c1d503a066f4284184b96948cf8f69a,
         type: 3}
@@ -97,15 +131,17 @@ PrefabInstance:
       propertyPath: m_WhatIsYeetable.m_Bits
       value: 11831
       objectReference: {fileID: 0}
-    - target: {fileID: 7817065665502079487, guid: 5c1d503a066f4284184b96948cf8f69a,
-        type: 3}
-      propertyPath: m_Material
-      value: 
+    - target: {fileID: 1103454041, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1735821019189729372, guid: 5c1d503a066f4284184b96948cf8f69a,
-        type: 3}
-      propertyPath: m_Material
-      value: 
+    - target: {fileID: 1103454041, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103454041, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1362142044, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
       propertyPath: m_Layer
@@ -115,19 +151,7 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 1873969609, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.35
-      objectReference: {fileID: 0}
     - target: {fileID: 1103454039, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1873969608, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1873969608, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
@@ -141,30 +165,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 1103454041, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1103454041, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1103454041, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1873969611, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1873969610, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5921488690235217447, guid: 5c1d503a066f4284184b96948cf8f69a,
         type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346646542257210770, guid: 5c1d503a066f4284184b96948cf8f69a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346646542257210770, guid: 5c1d503a066f4284184b96948cf8f69a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346646542257210770, guid: 5c1d503a066f4284184b96948cf8f69a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c1d503a066f4284184b96948cf8f69a, type: 3}
