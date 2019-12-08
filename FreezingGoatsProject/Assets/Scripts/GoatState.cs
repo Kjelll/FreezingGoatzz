@@ -9,6 +9,10 @@ public class GoatState : MonoBehaviour
     public GameObject iceObjects;
     public GameObject iceBlock;
     public int playerNumber;
+
+
+    public GameObject particleSystem;
+
     private void Awake()
     {
         InputController ownIC =  GetComponent<InputController>();
@@ -30,7 +34,8 @@ public class GoatState : MonoBehaviour
         }
         if (hitpoints <= 0)
         { 
-            UIkillFeed.instance.reportKiller(attacker.playerNumber);  
+            UIkillFeed.instance.reportKiller(attacker.playerNumber);
+            particleSystem.SetActive(false);
             DIE(r2b2);
         }
     }
@@ -40,7 +45,7 @@ public class GoatState : MonoBehaviour
         iceObjects.SetActive(true);
         iceBlock.SetActive(true);
         CameraMovement.instance.unsubscribe(r2b2.gameObject.GetComponent<GoatState>());
-
+        
         InputController killme = r2b2.gameObject.GetComponent<InputController>(); 
         GoatController killme2 = r2b2.gameObject.GetComponent<GoatController>();
         if (killme != null)

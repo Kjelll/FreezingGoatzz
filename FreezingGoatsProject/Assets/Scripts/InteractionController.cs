@@ -11,7 +11,6 @@ public class InteractionController : MonoBehaviour
     [SerializeField] private Vector2  m_scalingYeetPower;
     [SerializeField] private Vector2 m_minimumYeetPower;
     bool isCuteGoat = false;
-    public GameObject ParticleSystem;
 
     public float attackCooldown = 1.0f;
     bool cooldownActive = false;
@@ -72,11 +71,14 @@ public class InteractionController : MonoBehaviour
                         if (goatRBs.Contains(targetRB)) continue;
                         goatRBs.Add(targetRB);
 
-                        targetRB.freezeRotation = false;
-                    targetRB.GetComponent<InteractionController>().ParticleSystem.SetActive(true);
+                        targetRB.freezeRotation = false; 
                         float faceDir = gameObject.transform.localScale.x;
                     GoatState targetGS = colliders[i].gameObject.GetComponent<GoatState>();
-                    if (targetGS != null) targetGS.headButtEvent(yeets, targetRB, ownGoatState);
+                    if (targetGS != null)
+                    {
+                        targetGS.particleSystem.SetActive(true);
+                        targetGS.headButtEvent(yeets, targetRB, ownGoatState);
+                    }
 
                     Vector2 force = new Vector2(faceDir * (m_minimumYeetPower.x + yeets * m_scalingYeetPower.x), m_minimumYeetPower.y + yeets * m_scalingYeetPower.y);
                         Vector2 force2 = (force + new Vector2(force.x, 0f))/3f;
