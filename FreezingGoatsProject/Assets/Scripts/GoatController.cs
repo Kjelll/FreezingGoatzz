@@ -9,7 +9,7 @@ public class GoatController : MonoBehaviour
     [SerializeField] private LayerMask m_WhatIsGround;                          // A mask determining what is ground to the character
     [SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
     [SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
- 
+    public AudioSource jumpSound;
 
     const float k_GroundedRadius = .7f; // Radius of the overlap circle to determine if grounded
     public bool m_Grounded;            // Whether or not the player is grounded.
@@ -30,8 +30,9 @@ public class GoatController : MonoBehaviour
     {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
-        if (OnLandEvent == null)
-            OnLandEvent = new UnityEvent();
+        if (OnLandEvent == null) { 
+            OnLandEvent = new UnityEvent(); }
+        jumpSound = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -88,6 +89,8 @@ public class GoatController : MonoBehaviour
             // Add a vertical force to the player.
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce * Mathf.Clamp( jumpCharge+1f,1f,1.5f)));
+            jumpSound.clip = ClipHolder.instance.GetJumpSound();
+            jumpSound.Play();
         }
     }
 

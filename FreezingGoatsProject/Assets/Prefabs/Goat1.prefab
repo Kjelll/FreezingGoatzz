@@ -358,6 +358,7 @@ MonoBehaviour:
     m_Bits: 15159
   m_GroundCheck: {fileID: 3012039701076034456}
   m_CeilingCheck: {fileID: 3012039700931070809}
+  jumpSound: {fileID: 3012039700334310672}
   m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
@@ -412,7 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9402d1983ed601e4e87074410b4ae690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  honkSound: {fileID: 3012039700334310672}
+  sound: {fileID: 3012039700334310672}
   m_WhatIsYeetable:
     serializedVersion: 2
     m_Bits: 14903
@@ -430,7 +431,7 @@ AudioSource:
   m_GameObject: {fileID: 3012039700334310696}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243731632663491150, guid: 5617af434b6e79343ac0237a115178e2,
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5617af434b6e79343ac0237a115178e2,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: cced4fdc753a41b4f8d66cddfd081789, type: 3}
   m_PlayOnAwake: 0
