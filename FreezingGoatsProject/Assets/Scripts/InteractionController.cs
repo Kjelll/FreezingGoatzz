@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class InteractionController : MonoBehaviour
 {
-    public AudioSource honkSound;
+    [HideInInspector] public AudioSource audioSource;
+    [SerializeField] private AudioClip honkClip;
+    [SerializeField] private AudioClip yeetClip;
     [SerializeField] private LayerMask m_WhatIsYeetable;
     [SerializeField] private float k_yeetableRadius = .5f;
     [SerializeField] private Transform m_AttackPosition;
@@ -14,14 +16,15 @@ public class InteractionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        honkSound = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void Honk(bool isHonking)
     {
         if (isHonking)
         {
-            honkSound.Play();
+            audioSource.clip = honkClip;
+            audioSource.Play();
         }
 
     }
@@ -54,8 +57,10 @@ public class InteractionController : MonoBehaviour
                     }
 
                 }
-            } 
- 
+            }
+
+        audioSource.clip = yeetClip;
+        audioSource.Play();
     }
 
 
