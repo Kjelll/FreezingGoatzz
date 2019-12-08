@@ -10,6 +10,7 @@ public class GoatState : MonoBehaviour
     public GameObject iceBlock;
     public GameObject deepFreezeiceBlock;
     public int playerNumber;
+    public GameObject freeze;
 
 
     public GameObject particleSystem;
@@ -64,6 +65,7 @@ public class GoatState : MonoBehaviour
         iceBlock.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 1f, 0.7f);
         yield return new WaitForSeconds(seconds);
         Destroy(r2b2);
-        iceBlock.GetComponent<SpriteRenderer>().color = new Color(0.8f, 0.8f, 1f, 0.9f);
+        //iceBlock.GetComponent<SpriteRenderer>().color = new Color(0.8f, 0.8f, 1f, 0.9f);
+        freeze.SetActive(true);
     }
 }
