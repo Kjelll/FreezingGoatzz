@@ -5,6 +5,7 @@ using UnityEngine;
 public class GoatState : MonoBehaviour
 {
     public int hitpoints = 2;
+    public SpriteRenderer sprite;
     public GameObject iceObjects;
     public GameObject iceBlock;
     public int playerNumber;

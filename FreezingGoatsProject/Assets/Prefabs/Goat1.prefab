@@ -358,6 +358,7 @@ MonoBehaviour:
     m_Bits: 15159
   m_GroundCheck: {fileID: 3012039701076034456}
   m_CeilingCheck: {fileID: 3012039700931070809}
+  m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -584,6 +585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitpoints: 2
+  sprite: {fileID: 1103454041}
   iceObjects: {fileID: 1362142044}
   iceBlock: {fileID: 946716677}
   playerNumber: 0

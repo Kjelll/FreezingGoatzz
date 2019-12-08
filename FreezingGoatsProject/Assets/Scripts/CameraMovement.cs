@@ -30,6 +30,7 @@ public class CameraMovement : MonoBehaviour
     public Vector2 maxAndMin()
     {
         if (trackingGoats.Count == 0) return Vector2.zero;
+        bool updateRecordFlag = false;
         Vector2 output = new Vector2( trackingGoats[0].transform.position.y, trackingGoats[0].transform.position.y) ;
         foreach (GoatState gs in trackingGoats)
         {
@@ -41,6 +42,7 @@ public class CameraMovement : MonoBehaviour
                 {
                     allTimeMaxHeight = output.x;
                     highestGoat = gs;
+                    updateRecordFlag = true;
                 }
             }
             if (gs.transform.position.y < output.x)
@@ -48,7 +50,8 @@ public class CameraMovement : MonoBehaviour
                 output.y = gs.transform.position.y;
             }
         }
-        
+        if(updateRecordFlag)
+            UIHighscore.instance.setNewRecord(allTimeMaxHeight, highestGoat);
         return output;
     }
 
