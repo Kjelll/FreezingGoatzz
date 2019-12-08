@@ -6,6 +6,7 @@ public class InputController : MonoBehaviour
     public string controllerSuffix = "";
     public float speed;                //Floating point variable to store the player's movement speed.
     public bool honk;
+    public Animator animator;
     
 
     public GoatController goatController;
@@ -55,8 +56,12 @@ public class InputController : MonoBehaviour
         if (Input.GetButtonUp("Interact" + controllerSuffix))
         {
             yeet = true;
-           // Debug.Log( "yeet num:" + controllerSuffix +" duration " + yeetDuration); 
+            // Debug.Log( "yeet num:" + controllerSuffix +" duration " + yeetDuration); 
         }
+
+        //set animation values
+        animator.SetBool("isMoving", moveHorizontal != 0 ? true : false);
+        animator.SetBool("isChargingJump", jump);
 
     }
     void FixedUpdate()

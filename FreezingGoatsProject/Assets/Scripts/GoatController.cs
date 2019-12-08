@@ -10,6 +10,7 @@ public class GoatController : MonoBehaviour
     [SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
     [SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
     public AudioSource jumpSound;
+    public Animator animator;
 
     const float k_GroundedRadius = .7f; // Radius of the overlap circle to determine if grounded
     public bool m_Grounded;            // Whether or not the player is grounded.
@@ -52,6 +53,9 @@ public class GoatController : MonoBehaviour
                     OnLandEvent.Invoke();
             }
         }
+
+        //for animation. Sets the isInAir-value
+        animator.SetBool("isInAir", !m_Grounded);
     }
 
 
