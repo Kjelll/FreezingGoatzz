@@ -12,7 +12,7 @@ public class CameraMovement : MonoBehaviour
     public float followTolerance = 0.5f;
 
     public float allTimeMaxHeight = 0f;
-    p
+    
     private void Awake()
     {
         if(mainCam == null) mainCam = Camera.main;
