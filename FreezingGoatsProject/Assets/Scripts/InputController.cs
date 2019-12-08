@@ -61,7 +61,7 @@ public class InputController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (Mathf.Abs(moveHorizontal) > .1f)
+        if (Mathf.Abs(moveHorizontal) > .1f || !goatController.m_Grounded)
         { 
             goatController.Move(moveHorizontal * Time.fixedDeltaTime);
         }

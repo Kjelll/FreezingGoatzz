@@ -34,7 +34,7 @@ public class SpawningScript : MonoBehaviour
         }
         GameObject newSpawn = Instantiate(toInstantiate, spawnPosition.transform.position, Quaternion.identity);
 
-        CameraMovement.instance.subscribe(newSpawn);
+        CameraMovement.instance.subscribe(newSpawn.GetComponent< GoatState>());
 
     }
 

@@ -7,8 +7,18 @@ public class GoatState : MonoBehaviour
     public int hitpoints = 2;
     public GameObject iceObjects;
     public GameObject iceBlock;
-     
-    public void headButtEvent(float yeetPowa, Rigidbody2D r2b2, GameObject attacker)
+    public int playerNumber;
+    private void Awake()
+    {
+        InputController ownIC =  GetComponent<InputController>();
+        if (ownIC != null)
+        {
+            playerNumber = int.Parse( ownIC.controllerSuffix);
+
+        }
+
+}
+    public void headButtEvent(float yeetPowa, Rigidbody2D r2b2, GoatState attacker)
     {
         hitpoints--;
         if (yeetPowa >  1.0f)
@@ -18,21 +28,17 @@ public class GoatState : MonoBehaviour
             Debug.Log("To hitpoints: " + hitpoints);
         }
         if (hitpoints <= 0)
-        {
-            InputController killerIC = attacker.GetComponent<InputController>();
-            if (killerIC != null)
-            {
-                UIkillFeed.instance.reportKiller(int.Parse( killerIC.controllerSuffix)); 
-            }
+        { 
+            UIkillFeed.instance.reportKiller(attacker.playerNumber);  
             DIE(r2b2);
         }
     }
 
-    public void DIE(Rigidbody2D r2b2)
+    public void DIE(Rigidbody2D r2b2)   //makes the rigidbody targeted DIE
     {
         iceObjects.SetActive(true);
         iceBlock.SetActive(true);
-        CameraMovement.instance.unsubscribe(r2b2.gameObject);
+        CameraMovement.instance.unsubscribe(r2b2.gameObject.GetComponent<GoatState>());
 
         InputController killme = r2b2.gameObject.GetComponent<InputController>(); 
         GoatController killme2 = r2b2.gameObject.GetComponent<GoatController>();
