@@ -4274,6 +4274,7 @@ GameObject:
   - component: {fileID: 1174252891615359552}
   - component: {fileID: 1068805535}
   - component: {fileID: 1068805533}
+  - component: {fileID: 1174252891615359555}
   m_Layer: 0
   m_Name: Scriptholder
   m_TagString: Untagged
@@ -4281,6 +4282,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1174252891615359555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174252891615359554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801cd306cfa68b84c985b0cfd1fd0936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpSound: {fileID: 8300000, guid: 884cea1ab23e5ae468ef5df3ac0f09d6, type: 3}
+  yeetSound: {fileID: 8300000, guid: 296e9d1e566ba024e944f430b833c25d, type: 3}
+  cuteGoat0: {fileID: 8300000, guid: f0bb2cf79f063934d9c4e19c3d0b494f, type: 3}
+  cuteGoat1: {fileID: 8300000, guid: 40d6428052205b743bfee9cff383acc9, type: 3}
+  cuteGoat2: {fileID: 8300000, guid: cced4fdc753a41b4f8d66cddfd081789, type: 3}
+  cuteGoat3: {fileID: 8300000, guid: ce89af6cbde75734ca933c3ff1aaf63f, type: 3}
+  normalGoat0: {fileID: 8300000, guid: c46cc758cfe7def4283f14ebe94f4f1e, type: 3}
+  normalGoat1: {fileID: 8300000, guid: 2a79a2926819550498d37dab4d0c1fcf, type: 3}
+  normalGoat2: {fileID: 8300000, guid: f089384a4eb3f8a49a15da28ff2a5d51, type: 3}
+  normalGoat3: {fileID: 8300000, guid: 9fe8950f6d44ebe4eba06f942822af91, type: 3}
 --- !u!4 &1174252892620457012
 Transform:
   m_ObjectHideFlags: 0
