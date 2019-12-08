@@ -54,16 +54,7 @@ public class CameraMovement : MonoBehaviour
             UIHighscore.instance.setNewRecord(allTimeMaxHeight, highestGoat);
         return output;
     }
-    public void resetAllPos()
-    {
-        if (Input.GetButtonDown("Space"))
-        {
-          for(int i =0;i< trackingGoats.Count; i++) {
-                trackingGoats[i].transform.position = SpawningScript.instance.spawnPosition.transform.position;
-                    }
-        }
-    }
-
+   
 
     private void FixedUpdate()
     {
@@ -79,6 +70,17 @@ public class CameraMovement : MonoBehaviour
             if (maxMin.x < mainCam.transform.position.y + mainCam.orthographicSize - followTolerance)
             {
                 mainCam.transform.position = new Vector3(mainCam.transform.position.x, Mathf.Max(0, Mathf.Max(maxMin.y - followTolerance + mainCam.orthographicSize, maxMin.x + followTolerance - mainCam.orthographicSize)), mainCam.transform.position.z);
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            for (int i = 0; i < trackingGoats.Count; i++)
+            {
+                trackingGoats[i].transform.position = SpawningScript.instance.spawnPosition.transform.position;
             }
         }
     }
