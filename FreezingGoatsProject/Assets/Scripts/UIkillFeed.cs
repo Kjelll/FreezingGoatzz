@@ -38,7 +38,30 @@ public class UIkillFeed : MonoBehaviour
         }
     }
 
+    public int getMaxKills()
+    {
+        return Mathf.Max(killCount1, killCount2, killCount3, killCount4);
+    }
+    public int getWinner()
+    {
+        int max = Mathf.Max(killCount1, killCount2, killCount3, killCount4);
+        if(max== killCount1)
+        {
+            return 1;
 
+        }
+        if (max == killCount2)
+        {
+            return 2;
+        } 
+        if (max == killCount3)
+        {
+            return 3;
+
+        }
+        return 4;
+
+    }
 
     public void goat1kill() {  
         Goat1kills.text = "" + ++killCount1;

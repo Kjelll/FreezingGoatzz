@@ -15,5 +15,10 @@ public class CountdownTimer : MonoBehaviour
         timeLeft -= Time.deltaTime;
         int seconds = (((int)timeLeft) % 60);
         countdownText.text = "" + ((int)(timeLeft / 60f)) + ":"  + ( (seconds<10) ? "0" : "" )+ seconds;
+        if (timeLeft < 0f)
+        {
+            EndScreenScript.instance.endgame();
+            Destroy(gameObject); //sepukku
+        }
     }
 }
