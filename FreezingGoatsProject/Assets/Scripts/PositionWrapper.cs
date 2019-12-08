@@ -17,10 +17,11 @@ public class PositionWrapper : MonoBehaviour
 
         void FixedUpdate()
         {
-        if (m_Rigidbody2D == null) return;
+        
             if(transform.position.x > maxRightPos)
             {
                 transform.position = new Vector3( maxLeftPos + .1f, transform.position.y, transform.position.z);
+            if (m_Rigidbody2D == null) return;
             if (m_Rigidbody2D.velocity.x > 5f)
             {
                 m_Rigidbody2D.AddForce(new Vector2(pushIntoScreenPower, pushIntoScreenPower / 20f)); 
@@ -29,6 +30,7 @@ public class PositionWrapper : MonoBehaviour
         if (transform.position.x < maxLeftPos)
         {
             transform.position = new Vector3(maxRightPos - 0.1f, transform.position.y, transform.position.z);
+            if (m_Rigidbody2D == null) return;
             if (m_Rigidbody2D.velocity.x < -5f)
             {
                 m_Rigidbody2D.AddForce(new Vector2(-pushIntoScreenPower, pushIntoScreenPower / 20f));

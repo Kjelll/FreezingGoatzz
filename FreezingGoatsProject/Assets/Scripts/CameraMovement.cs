@@ -31,7 +31,7 @@ public class CameraMovement : MonoBehaviour
     {
         if (trackingGoats.Count == 0) return Vector2.zero;
         bool updateRecordFlag = false;
-        Vector2 output = new Vector2( trackingGoats[0].transform.position.y, trackingGoats[0].transform.position.y) ;
+        Vector2 output = new Vector2(-999f, -999f) ;
         foreach (GoatState gs in trackingGoats)
         {
             if (gs.transform.position.y > output.x)
