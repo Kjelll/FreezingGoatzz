@@ -11,6 +11,8 @@ public class InteractionController : MonoBehaviour
     [SerializeField] private Vector2  m_scalingYeetPower;
     [SerializeField] private Vector2 m_minimumYeetPower;
 
+    public float attackCooldown = 1.0f;
+    bool cooldownActive = false; 
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,9 @@ public class InteractionController : MonoBehaviour
 
     public void Yeet(float yeets)
     {
+        if (cooldownActive) return;
+        cooldownActive = true;
+        StartCoroutine(waitForCooldown());
         List<Rigidbody2D> goatRBs = new List<Rigidbody2D>();
             Collider2D[] colliders = Physics2D.OverlapCircleAll(m_AttackPosition.position, k_yeetableRadius, m_WhatIsYeetable);
             for (int i = 0; i < colliders.Length; i++)
@@ -61,7 +66,11 @@ public class InteractionController : MonoBehaviour
 
 
 
-
+    public IEnumerator waitForCooldown()
+    { 
+        yield return new WaitForSeconds(attackCooldown);
+        cooldownActive = false;
+    }
 
     public IEnumerator kickAfterFrames(Rigidbody2D r2b2, Vector2 force1, Vector2 forceAfterSecond)
     {

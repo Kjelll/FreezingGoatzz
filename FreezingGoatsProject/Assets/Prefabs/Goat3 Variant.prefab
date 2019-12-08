@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: iceObjects
       value: 
       objectReference: {fileID: 8683084463597868869}
+    - target: {fileID: 663119201, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
+      propertyPath: hitpoints
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1362142044, guid: 81b66028537150a439f76310e1cb0a46, type: 3}
       propertyPath: m_Layer
       value: 12

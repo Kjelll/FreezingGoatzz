@@ -433,6 +433,7 @@ MonoBehaviour:
   m_AttackPosition: {fileID: 1873969609}
   m_scalingYeetPower: {x: 420, y: 1042}
   m_minimumYeetPower: {x: 420, y: 1042}
+  attackCooldown: 1
 --- !u!82 &3012039700334310672
 AudioSource:
   m_ObjectHideFlags: 0
