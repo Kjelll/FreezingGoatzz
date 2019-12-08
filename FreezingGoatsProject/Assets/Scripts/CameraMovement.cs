@@ -78,7 +78,7 @@ public class CameraMovement : MonoBehaviour
 
             if (maxMin.x < mainCam.transform.position.y + mainCam.orthographicSize - followTolerance)
             {
-                mainCam.transform.position = new Vector3(mainCam.transform.position.x, Mathf.Max( maxMin.y - followTolerance + mainCam.orthographicSize, maxMin.x + followTolerance - mainCam.orthographicSize), mainCam.transform.position.z);
+                mainCam.transform.position = new Vector3(mainCam.transform.position.x, Mathf.Max(0, Mathf.Max(maxMin.y - followTolerance + mainCam.orthographicSize, maxMin.x + followTolerance - mainCam.orthographicSize)), mainCam.transform.position.z);
             }
         }
     }
