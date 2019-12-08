@@ -32,7 +32,9 @@ public class SpawningScript : MonoBehaviour
             case 4: toInstantiate = PlayerPrefab4; break;
 
         }
-        Instantiate(toInstantiate, spawnPosition.transform.position, Quaternion.identity);
+        GameObject newSpawn = Instantiate(toInstantiate, spawnPosition.transform.position, Quaternion.identity);
+
+        CameraMovement.instance.subscribe(newSpawn);
 
     }
 

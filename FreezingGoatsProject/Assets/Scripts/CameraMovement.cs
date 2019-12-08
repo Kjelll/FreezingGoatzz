@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    public static CameraMovement instance;
     public List<GameObject> trackingObjects;
 
     public Camera mainCam;
 
-    public float topFollowMinimum = 0.5f;
+    public float followTolerance = 0.5f;
 
 
     private void Awake()
     {
         if(mainCam == null) mainCam = Camera.main;
+        instance = this;
     }
-
+    public void subscribe(GameObject startTracking)
+    {
+        trackingObjects.Add(startTracking);
+    }
+    public void unsubscribe(GameObject stopTracking)
+    {
+        trackingObjects.Remove(stopTracking);
+    }
 
     public GameObject getHighest()
     {
@@ -51,17 +60,17 @@ public class CameraMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 maxMin = maxAndMin();
-        if (maxMin.x > mainCam.transform.position.y + mainCam.orthographicSize - topFollowMinimum)
+        if (maxMin.x > mainCam.transform.position.y + mainCam.orthographicSize - followTolerance)
         {
-            mainCam.transform.position = new Vector3(mainCam.transform.position.x, maxMin.x + topFollowMinimum - mainCam.orthographicSize, mainCam.transform.position.z);
+            mainCam.transform.position = new Vector3(mainCam.transform.position.x, maxMin.x + followTolerance - mainCam.orthographicSize, mainCam.transform.position.z);
         }
 
-        if (maxMin.y < mainCam.transform.position.y - mainCam.orthographicSize)
+        if (maxMin.y < mainCam.transform.position.y - mainCam.orthographicSize + followTolerance)
         {
 
-            if (maxMin.x < mainCam.transform.position.y + mainCam.orthographicSize - topFollowMinimum)
+            if (maxMin.x < mainCam.transform.position.y + mainCam.orthographicSize - followTolerance)
             {
-                mainCam.transform.position = new Vector3(mainCam.transform.position.x, Mathf.Max( maxMin.y + mainCam.orthographicSize, maxMin.x + topFollowMinimum - mainCam.orthographicSize), mainCam.transform.position.z);
+                mainCam.transform.position = new Vector3(mainCam.transform.position.x, Mathf.Max( maxMin.y - followTolerance + mainCam.orthographicSize, maxMin.x + followTolerance - mainCam.orthographicSize), mainCam.transform.position.z);
             }
         }
     }

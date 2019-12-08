@@ -25,8 +25,10 @@ public class GoatState : MonoBehaviour
     {
         iceObjects.SetActive(true);
         iceBlock.SetActive(true);
-        InputController killme = gameObject.GetComponent<InputController>(); 
-        GoatController killme2 = gameObject.GetComponent<GoatController>();
+        CameraMovement.instance.unsubscribe(r2b2.gameObject);
+
+        InputController killme = r2b2.gameObject.GetComponent<InputController>(); 
+        GoatController killme2 = r2b2.gameObject.GetComponent<GoatController>();
         if (killme != null)
         {
             SpawningScript.instance.reportDeath(killme.controllerSuffix);
@@ -41,6 +43,6 @@ public class GoatState : MonoBehaviour
     { 
         yield return new WaitForSeconds(seconds);
         Destroy(r2b2);
-        iceBlock.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 1f, 0.8f);
+        iceBlock.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 1f, 0.5f);
     }
 }
