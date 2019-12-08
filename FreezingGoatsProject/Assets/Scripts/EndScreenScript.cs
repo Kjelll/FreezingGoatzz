@@ -7,7 +7,10 @@ public class EndScreenScript : MonoBehaviour
 {
     public Text MurderMasterText;
     public Text highScoreText;
+    public GameObject anchorMurder;
+    public GameObject anchorHighScore;
 
+    
 
     public void fillKillCount(int frozenGoats)
     {

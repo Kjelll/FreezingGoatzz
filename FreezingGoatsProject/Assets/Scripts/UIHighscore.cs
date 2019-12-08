@@ -15,6 +15,7 @@ public class UIHighscore : MonoBehaviour
     public RectTransform player3;
     public RectTransform player4;
 
+
     public SpriteRenderer maxHeightLatte;
     public Image maxHeightMarker;
 
