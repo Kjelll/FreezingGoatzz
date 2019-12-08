@@ -7,8 +7,8 @@ public class GoatState : MonoBehaviour
     public int hitpoints = 2;
     public GameObject iceObjects;
     public GameObject iceBlock;
-
-    public void headButtEvent(float yeetPowa, Rigidbody2D r2b2)
+     
+    public void headButtEvent(float yeetPowa, Rigidbody2D r2b2, GameObject attacker)
     {
         hitpoints--;
         if (yeetPowa >  1.0f)
@@ -19,6 +19,11 @@ public class GoatState : MonoBehaviour
         }
         if (hitpoints <= 0)
         {
+            InputController killerIC = attacker.GetComponent<InputController>();
+            if (killerIC != null)
+            {
+                UIkillFeed.instance.reportKiller(int.Parse( killerIC.controllerSuffix)); 
+            }
             DIE(r2b2);
         }
     }

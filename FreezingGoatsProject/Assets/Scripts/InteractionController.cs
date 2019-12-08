@@ -49,7 +49,7 @@ public class InteractionController : MonoBehaviour
                         targetRB.freezeRotation = false;
                         float faceDir = gameObject.transform.localScale.x;
                     GoatState targetGS = colliders[i].gameObject.GetComponent<GoatState>();
-                    if (targetGS != null) targetGS.headButtEvent(yeets, targetRB);
+                    if (targetGS != null) targetGS.headButtEvent(yeets, targetRB,gameObject);
 
                     Vector2 force = new Vector2(faceDir * (m_minimumYeetPower.x + yeets * m_scalingYeetPower.x), m_minimumYeetPower.y + yeets * m_scalingYeetPower.y);
                         Vector2 force2 = (force + new Vector2(force.x, 0f))/3f;
