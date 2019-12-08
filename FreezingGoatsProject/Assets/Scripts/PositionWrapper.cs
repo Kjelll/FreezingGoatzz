@@ -17,7 +17,7 @@ public class PositionWrapper : MonoBehaviour
 
         void FixedUpdate()
         {
-
+        if (m_Rigidbody2D == null) return;
             if(transform.position.x > maxRightPos)
             {
                 transform.position = new Vector3( maxLeftPos + .1f, transform.position.y, transform.position.z);

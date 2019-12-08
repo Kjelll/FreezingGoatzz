@@ -5,61 +5,53 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public static CameraMovement instance;
-    public List<GameObject> trackingObjects;
+    public List<GoatState> trackingGoats;
 
     public Camera mainCam;
 
     public float followTolerance = 0.5f;
 
-    public float allTimeMaxHeight = 0f;
-    
+    public float allTimeMaxHeight = -1000f;
+    public GoatState highestGoat;
     private void Awake()
     {
         if(mainCam == null) mainCam = Camera.main;
         instance = this;
     }
-    public void subscribe(GameObject startTracking)
+    public void subscribe(GoatState startTracking)
     {
-        trackingObjects.Add(startTracking);
+        trackingGoats.Add(startTracking);
     }
-    public void unsubscribe(GameObject stopTracking)
+    public void unsubscribe(GoatState stopTracking)
     {
-        trackingObjects.Remove(stopTracking);
+        trackingGoats.Remove(stopTracking);
     }
-
-    public GameObject getHighest()
-    {
-        GameObject output = trackingObjects[0];
-        foreach(GameObject go in trackingObjects)
-        {
-            if (go.transform.position.y > output.transform.position.y)
-            {
-                output = go;
-            }
-        }
-        return output;
-    }
+ 
     public Vector2 maxAndMin()
     {
-        if (trackingObjects.Count == 0) return Vector2.zero;
-        Vector2 output = new Vector2( trackingObjects[0].transform.position.y, trackingObjects[0].transform.position.y) ;
-        foreach (GameObject go in trackingObjects)
+        if (trackingGoats.Count == 0) return Vector2.zero;
+        bool updateRecordFlag = false;
+        Vector2 output = new Vector2( trackingGoats[0].transform.position.y, trackingGoats[0].transform.position.y) ;
+        foreach (GoatState gs in trackingGoats)
         {
-            if (go.transform.position.y > output.x)
+            if (gs.transform.position.y > output.x)
             {
-                output.x = go.transform.position.y;
+                output.x = gs.transform.position.y;
 
                 if (output.x > allTimeMaxHeight)
                 {
                     allTimeMaxHeight = output.x;
+                    highestGoat = gs;
+                    updateRecordFlag = true;
                 }
             }
-            if (go.transform.position.y < output.x)
+            if (gs.transform.position.y < output.x)
             {
-                output.y = go.transform.position.y;
+                output.y = gs.transform.position.y;
             }
         }
-        
+        if(updateRecordFlag)
+            UIHighscore.instance.setNewRecord(allTimeMaxHeight, highestGoat);
         return output;
     }
 

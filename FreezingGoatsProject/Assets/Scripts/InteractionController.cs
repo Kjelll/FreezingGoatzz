@@ -12,8 +12,13 @@ public class InteractionController : MonoBehaviour
     [SerializeField] private Vector2 m_minimumYeetPower;
 
     public float attackCooldown = 1.0f;
-    bool cooldownActive = false; 
-    // Start is called before the first frame update
+    bool cooldownActive = false;
+    private GoatState ownGoatState;
+
+    private void Awake()
+    {
+        ownGoatState = GetComponent<GoatState>();
+    }
     void Start()
     {
         honkSound = GetComponent<AudioSource>();
@@ -49,7 +54,7 @@ public class InteractionController : MonoBehaviour
                         targetRB.freezeRotation = false;
                         float faceDir = gameObject.transform.localScale.x;
                     GoatState targetGS = colliders[i].gameObject.GetComponent<GoatState>();
-                    if (targetGS != null) targetGS.headButtEvent(yeets, targetRB);
+                    if (targetGS != null) targetGS.headButtEvent(yeets, targetRB, ownGoatState);
 
                     Vector2 force = new Vector2(faceDir * (m_minimumYeetPower.x + yeets * m_scalingYeetPower.x), m_minimumYeetPower.y + yeets * m_scalingYeetPower.y);
                         Vector2 force2 = (force + new Vector2(force.x, 0f))/3f;
