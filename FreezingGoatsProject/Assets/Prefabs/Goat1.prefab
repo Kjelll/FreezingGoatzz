@@ -421,7 +421,6 @@ MonoBehaviour:
   m_AttackPosition: {fileID: 1873969609}
   m_scalingYeetPower: {x: 420, y: 1042}
   m_minimumYeetPower: {x: 420, y: 1042}
-  ParticleSystem: {fileID: 1359141636200138418}
   attackCooldown: 1
 --- !u!82 &3012039700334310672
 AudioSource:
@@ -591,6 +590,7 @@ MonoBehaviour:
   iceObjects: {fileID: 1362142044}
   iceBlock: {fileID: 946716677}
   playerNumber: 0
+  particleSystem: {fileID: 1359141636200138418}
 --- !u!1 &3012039700931070808
 GameObject:
   m_ObjectHideFlags: 0
