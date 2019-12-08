@@ -54,6 +54,15 @@ public class CameraMovement : MonoBehaviour
             UIHighscore.instance.setNewRecord(allTimeMaxHeight, highestGoat);
         return output;
     }
+    public void resetAllPos()
+    {
+        if (Input.GetButtonDown("Space"))
+        {
+          for(int i =0;i< trackingGoats.Count; i++) {
+                trackingGoats[i].transform.position = SpawningScript.instance.spawnPosition.transform.position;
+                    }
+        }
+    }
 
 
     private void FixedUpdate()
