@@ -11,9 +11,11 @@ public class GoatState : MonoBehaviour
     public void headButtEvent(float yeetPowa, Rigidbody2D r2b2)
     {
         hitpoints--;
-        if (yeetPowa > 3)
+        if (yeetPowa >  1.0f)
         {
+            Debug.Log("Yeeted with a powa of " + yeetPowa);
             hitpoints -= (int) yeetPowa;
+            Debug.Log("To hitpoints: " + hitpoints);
         }
         if (hitpoints <= 0)
         {
@@ -40,9 +42,10 @@ public class GoatState : MonoBehaviour
 
 
     public IEnumerator disableAfterSeconds(Rigidbody2D r2b2, float seconds)
-    { 
+    {
+        iceBlock.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 1f, 0.7f);
         yield return new WaitForSeconds(seconds);
         Destroy(r2b2);
-        iceBlock.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 1f, 0.5f);
+        iceBlock.GetComponent<SpriteRenderer>().color = new Color(0.8f, 0.8f, 1f, 0.9f);
     }
 }

@@ -11,7 +11,8 @@ public class CameraMovement : MonoBehaviour
 
     public float followTolerance = 0.5f;
 
-
+    public float allTimeMaxHeight = 0f;
+    p
     private void Awake()
     {
         if(mainCam == null) mainCam = Camera.main;
@@ -47,12 +48,18 @@ public class CameraMovement : MonoBehaviour
             if (go.transform.position.y > output.x)
             {
                 output.x = go.transform.position.y;
+
+                if (output.x > allTimeMaxHeight)
+                {
+                    allTimeMaxHeight = output.x;
+                }
             }
             if (go.transform.position.y < output.x)
             {
                 output.y = go.transform.position.y;
             }
         }
+        
         return output;
     }
 
